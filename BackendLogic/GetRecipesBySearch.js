@@ -34,9 +34,7 @@ export async function GetRecipesBySearch(type,items, userId){
 
     const result = word.map(word => filterAlcOrNonAlcDrinks.filter(drink => drink.ingredients.reduce((acc, ingredient) => 
     ingredient.name.toLowerCase().includes(word.toLowerCase()) ? acc = drink : acc, 0))).flat()
-        console.log(result.length)
-    if (result.length > 0) return result
-    
+    if (result.length > 0) return Array.from(new Set([...result]))
     const resultByFirstName = filterAlcOrNonAlcDrinks.filter(drink => 
         drink.name.toLowerCase().includes(word.join(' ').toLowerCase()) && drink
         )
