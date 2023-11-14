@@ -1,43 +1,48 @@
-# projeto_final_4
-Repositório de projeto final do grupo 4, bootcamp 6 #sintra
+# Copo: Seu app de bebidas favorito
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+O Copo é uma aplicação desenvolvida utilizando Node.js, Next.js e MongoDB, criada para proporcionar aos usuários uma experiência única na busca e descoberta de receitas de drinks.
 
-## Getting Started
+## Funcionalidades Principais
 
-First, run the development server:
+- **Consulta de Receitas:** Explore uma nossa base de dados de drinks, com receitas detalhadas e instruções passo a passo.
+- **Favoritos:** Guarde suas receitas preferidas para acessá-las facilmente mais tarde.
+- **Busca Avançada:** Encontre a receita perfeita filtrando por ingredientes, nome ou tipo (alcoólico/não alcoólico).
+- **Gere uma lista de drinks aleatórios:** Não sabe o que fazer para os amigos hoje a noite? A gente cuida disso!
+- **Use a criatividade:** Crie suas próprias próprias receitas no app.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Node.js:** Base da aplicação, proporcionando uma execução eficiente do lado do servidor.
+- **Next.js:** Framework React para uma experiência de desenvolvimento moderna e eficiente.
+- **MongoDB:** Banco de dados NoSQL para armazenar e gerenciar as receitas de forma flexível e escalável.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Como Iniciar
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Siga estas etapas para rodar o Copo no seu ambiente de desenvolvimento:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Pré-requisitos:**
+   - Certifique-se de ter o Node.js instalado em sua máquina.
+   - Certifique-se de ter o MongoDB instalado e o MongoDB Compass para facilitar a administração visual do banco de dados.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Configuração do Banco de Dados:**
+   - Abra o MongoDB Compass e conecte-se a uma instância local ou remota do MongoDB.
+   - Crie uma nova database chamada "Copo".
+   - Dentro da database "Copo", crie duas collections: "receitas" e "users".
 
-## Learn More
+3. **Seed de Receitas:**
+   - Na raiz do projeto, encontre o arquivo `receitas.json` em `/public/assets/data`.
+   - Utilize o MongoDB Compass para [importar este arquivo](https://www.mongodb.com/docs/compass/current/import-export/) (`receitas.json`) na collection "receitas" da database "Copo". Isso preencherá a collection com dados de mock.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Instalação das Dependências:**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Inicie a aplicação:**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+6. **Acesse a aplicação:**
+    - Abra seu navegador e visite http://localhost:3000 para começar a explorar as receitas.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
