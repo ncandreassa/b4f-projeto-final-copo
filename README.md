@@ -1,4 +1,4 @@
-# Copo: Seu app de bebidas favorito
+# 🍸 Copo: Seu app de bebidas favorito
 
 O Copo é uma aplicação desenvolvida utilizando Node.js, Next.js e MongoDB, criada para proporcionar aos usuários uma experiência única na busca e descoberta de receitas de drinks.
 
